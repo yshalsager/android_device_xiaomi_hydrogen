@@ -18,12 +18,19 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Inherit from Omni custom product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/omni/config/gsm.mk)
+
 # Inherit from hydrogen device
 $(call inherit-product, device/xiaomi/hydrogen/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := hydrogen
-PRODUCT_NAME := full_hydrogen
+PRODUCT_NAME := omni_hydrogen
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := hydrogen
 PRODUCT_MANUFACTURER := Xiaomi
+
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+

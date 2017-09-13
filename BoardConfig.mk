@@ -19,7 +19,7 @@
 DEVICE_PATH := device/xiaomi/hydrogen
 
 # Assertions
-TARGET_OTA_ASSERT_DEVICE := hydrogen
+TARGET_OTA_ASSERT_DEVICE := none
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
