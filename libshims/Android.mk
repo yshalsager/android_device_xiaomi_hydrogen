@@ -17,9 +17,9 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES := media/libstagefright/foundation/MediaBuffer.c
-
-LOCAL_SHARED_LIBRARIES := libstagefright_foundation
+LOCAL_SRC_FILES := media/libstagefright/foundation/MediaBuffer.cpp
+LOCAL_SHARED_LIBRARIES := libstagefright_foundation libui libgui
+LOCAL_CFLAGS := -Wno-unused-private-field
 
 LOCAL_MODULE := libshims_ims
 LOCAL_MODULE_TAGS := optional
